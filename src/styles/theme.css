@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
 :root {
   /* Colors */
   --bg-primary: #2b2b2b;
@@ -24,7 +26,7 @@
   --status-info: #5BA7FF;
   
   /* Fonts */
-  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-ui: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', Consolas, Menlo, monospace;
   
   /* Typography Scale */
@@ -35,16 +37,16 @@
   --text-small: 11px;
   --text-caption: 10px;
   
-  /* Radii - Professional/Minimal */
-  --radius-sm: 2px;
-  --radius-btn: 2px;
-  --radius-card: 4px;
-  --radius-panel: 4px;
-  --radius-sheet: 4px;
+  /* Radii - Smooth Curvy */
+  --radius-sm: 8px;
+  --radius-btn: 12px;
+  --radius-card: 16px;
+  --radius-panel: 20px;
+  --radius-sheet: 24px;
   
   /* Elevation Shadows - Minimal */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.25);
   --shadow-accent: none;
   
   /* Layout Dimensions */

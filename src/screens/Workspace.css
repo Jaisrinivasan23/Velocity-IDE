@@ -93,34 +93,4 @@
   display: block;
 }
 
-@media (min-width: 768px) {
-  .workspace-tabs-bar {
-    display: none;
-  }
-
-  .workspace-main-content {
-    display: grid;
-    grid-template-columns: 240px 1fr 300px;
-    gap: 1px;
-    background: var(--border-primary);
-  }
-
-  .ws-files-drawer {
-    position: relative;
-    transform: none;
-    width: auto;
-    border-right: none;
-    box-shadow: none;
-    z-index: 1;
-  }
-  
-  .ws-drawer-overlay {
-    display: none !important;
-  }
-
-  .ws-mobile-view {
-    position: relative;
-    display: block !important;
-    background: var(--bg-primary);
-  }
-}
+/* Desktop layout disabled for prototype to maintain drawer view */

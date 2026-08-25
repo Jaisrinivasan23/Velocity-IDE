@@ -9,12 +9,14 @@ import './Workspace.css';
 
 export const Workspace: React.FC = () => {
   const { files, selectedFile, setSelectedFile } = useProject();
-  const [activeTab, setActiveTab] = useState<'Files' | 'Code' | 'AI'>('Files');
+  const [activeTab, setActiveTab] = useState<'Code' | 'AI'>('Code');
   const [showAISheet, setShowAISheet] = useState(false);
+  const [showFilesDrawer, setShowFilesDrawer] = useState(false);
 
   const handleSelectFileFromTree = (path: string) => {
     setSelectedFile(path);
     setActiveTab('Code');
+    setShowFilesDrawer(false); // Close drawer on mobile after selection
   };
 
   return (
@@ -22,11 +24,11 @@ export const Workspace: React.FC = () => {
       {/* Workspace Tabs Header (Mobile) */}
       <div className="workspace-tabs-bar font-ui">
         <button
-          className={`ws-tab-btn ${activeTab === 'Files' ? 'active' : ''}`}
-          onClick={() => setActiveTab('Files')}
+          className="ws-tab-btn ws-drawer-toggle"
+          onClick={() => setShowFilesDrawer(true)}
+          title="Open Files"
         >
-          <Folder size={16} />
-          <span>Files</span>
+          <Folder size={18} />
         </button>
 
         <button
@@ -48,15 +50,23 @@ export const Workspace: React.FC = () => {
 
       {/* Main Workspace View Area */}
       <div className="workspace-main-content">
-        {/* Mobile View Switching */}
-        <div className={`ws-mobile-view ${activeTab === 'Files' ? 'show' : 'hide'}`}>
+        {/* Drawer overlay for mobile */}
+        <div 
+          className={`ws-drawer-overlay ${showFilesDrawer ? 'show' : ''}`} 
+          onClick={() => setShowFilesDrawer(false)}
+        />
+
+        {/* Files Drawer / Left Sidebar */}
+        <div className={`ws-files-drawer ${showFilesDrawer ? 'open' : ''}`}>
           <FileTree files={files} onSelectFile={handleSelectFileFromTree} />
         </div>
 
+        {/* Code Editor */}
         <div className={`ws-mobile-view ${activeTab === 'Code' ? 'show' : 'hide'}`}>
           <CodeEditor onOpenAI={() => setShowAISheet(true)} />
         </div>
 
+        {/* AI Agent */}
         <div className={`ws-mobile-view ${activeTab === 'AI' ? 'show' : 'hide'}`}>
           <AIAgent embedded />
         </div>

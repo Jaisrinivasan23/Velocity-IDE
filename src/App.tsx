@@ -13,6 +13,7 @@ import { TerminalScreen } from './screens/TerminalScreen';
 import { Deploy } from './screens/Deploy';
 import { ProjectDoctor } from './screens/ProjectDoctor';
 import { ProjectMemory } from './screens/ProjectMemory';
+import { Projects } from './screens/Projects';
 
 export const App: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ export const App: React.FC = () => {
           <main className="page-container">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<Projects />} />
               <Route path="/workspace" element={<Workspace />} />
               <Route path="/ai" element={<AIAgent />} />
               <Route path="/preview" element={<Preview />} />

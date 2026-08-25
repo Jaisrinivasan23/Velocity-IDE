@@ -10,7 +10,8 @@ import {
   RotateCcw, 
   Activity, 
   BrainCircuit, 
-  Sparkles 
+  Sparkles,
+  Folder
 } from 'lucide-react';
 import './TopBar.css';
 
@@ -37,6 +38,7 @@ export const TopBar: React.FC = () => {
       case '/workspace': return projectName;
       case '/ai': return 'AI Agent';
       case '/preview': return 'Live Preview';
+      case '/projects': return 'Projects';
       case '/terminal': return 'Terminal';
       case '/deploy': return 'Deploy';
       case '/doctor': return 'Project Doctor';
@@ -68,6 +70,15 @@ export const TopBar: React.FC = () => {
       </div>
 
       <div className="v-topbar-right">
+        {/* Projects Shortcut */}
+        <button 
+          className="v-topbar-action-icon"
+          onClick={() => navigate('/projects')}
+          title="Projects"
+        >
+          <Folder size={18} />
+        </button>
+
         {/* Project Health Doctor Icon Shortcut */}
         <button 
           className="v-topbar-action-icon"

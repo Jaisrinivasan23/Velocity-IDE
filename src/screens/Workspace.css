@@ -4,6 +4,7 @@
   height: 100%;
   overflow: hidden;
   background: var(--bg-primary);
+  position: relative;
 }
 
 .workspace-tabs-bar {
@@ -12,6 +13,7 @@
   border-bottom: 1px solid var(--border-primary);
   height: 42px;
   flex-shrink: 0;
+  padding: 0 8px;
 }
 
 .ws-tab-btn {
@@ -30,6 +32,13 @@
   color: var(--accent-primary);
   border-bottom-color: var(--accent-primary);
   background: var(--bg-elevated);
+}
+
+.ws-tab-btn.ws-drawer-toggle {
+  flex: 0 0 auto;
+  padding: 0 16px;
+  margin-right: 8px;
+  border-right: 1px solid var(--border-primary);
 }
 
 .workspace-main-content {
@@ -54,9 +63,39 @@
   display: none;
 }
 
+.ws-files-drawer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-primary);
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: transform 0.25s ease-in-out;
+  box-shadow: 4px 0 16px rgba(0,0,0,0.5);
+}
+
+.ws-files-drawer.open {
+  transform: translateX(0);
+}
+
+.ws-drawer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 99;
+  display: none;
+}
+
+.ws-drawer-overlay.show {
+  display: block;
+}
+
 @media (min-width: 768px) {
   .workspace-tabs-bar {
-    display: none; /* Hide mobile tabs on expanded desktop mode */
+    display: none;
   }
 
   .workspace-main-content {
@@ -64,6 +103,19 @@
     grid-template-columns: 240px 1fr 300px;
     gap: 1px;
     background: var(--border-primary);
+  }
+
+  .ws-files-drawer {
+    position: relative;
+    transform: none;
+    width: auto;
+    border-right: none;
+    box-shadow: none;
+    z-index: 1;
+  }
+  
+  .ws-drawer-overlay {
+    display: none !important;
   }
 
   .ws-mobile-view {

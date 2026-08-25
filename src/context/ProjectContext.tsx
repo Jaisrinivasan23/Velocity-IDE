@@ -213,7 +213,7 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({ child
       rollbackAvailable: true
     }));
 
-    addToast('✓ Updated TransactionList.jsx', 'success');
+    addToast('Updated TransactionList.jsx', 'success');
   };
 
   // Hero Flow 3: Simulate Error
@@ -226,7 +226,7 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({ child
       terminalOutput: [
         ...prev.terminalOutput,
         "",
-        "🔴 RUNTIME ERROR in src/components/TransactionList.jsx:42",
+        "[ERROR] RUNTIME ERROR in src/components/TransactionList.jsx:42",
         "TypeError: Cannot read properties of undefined (reading 'map')",
         "    at TransactionList (TransactionList.jsx:42:25)",
         "    at App (App.jsx:16:9)"
@@ -253,14 +253,14 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({ child
       terminalOutput: [
         ...prev.terminalOutput,
         "",
-        "✓ AI Fix Applied to TransactionList.jsx",
-        "✓ Fast HMR update applied",
-        "✓ All runtime checks passed"
+        "[SUCCESS] AI Fix Applied to TransactionList.jsx",
+        "[SUCCESS] Fast HMR update applied",
+        "[SUCCESS] All runtime checks passed"
       ]
     }));
 
-    addToast('✓ Bug fixed', 'success');
-    addToast('✓ Tests passed', 'success');
+    addToast('Bug fixed', 'success');
+    addToast('Tests passed', 'success');
   };
 
   // Hero Flow 4: Terminal Commands
@@ -286,9 +286,9 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({ child
     });
 
     if (command === 'npm test') {
-      addToast('✓ All 18 tests passed', 'success');
+      addToast('All 18 tests passed', 'success');
     } else if (command === 'npm run build') {
-      addToast('✓ Build completed successfully', 'success');
+      addToast('Build completed successfully', 'success');
     }
   };
 
@@ -305,7 +305,7 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({ child
         projectHealthy: allFixed
       };
     });
-    addToast('✓ Issue resolved', 'success');
+    addToast('Issue resolved', 'success');
   };
 
   const fixAllDoctorIssues = async () => {
@@ -317,7 +317,7 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({ child
       doctorIssues: prev.doctorIssues.map(i => ({ ...i, isFixed: true })),
       projectHealthy: true
     }));
-    addToast('✓ All 3 issues resolved', 'success');
+    addToast('All 3 issues resolved', 'success');
   };
 
   // Hero Flow 7: Deploy Simulation
@@ -348,7 +348,7 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({ child
       deploymentStep: 5,
       deployed: true
     }));
-    addToast('✓ Deployment successful!', 'success');
+    addToast('Deployment successful!', 'success');
   };
 
   // Rollback AI changes
@@ -362,7 +362,7 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({ child
       },
       rollbackAvailable: false
     }));
-    addToast('↶ AI changes rolled back', 'info');
+    addToast('AI changes rolled back', 'info');
   };
 
   // Reset Demo to initial pristine state

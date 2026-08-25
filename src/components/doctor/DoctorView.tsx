@@ -25,11 +25,11 @@ export const DoctorView: React.FC = () => {
 
         <div className="hero-text-wrap">
           <h2 className="hero-title">PROJECT HEALTH</h2>
-          <p className="hero-sub font-mono">
-            {projectHealthy 
-              ? '✓ Project healthy · No critical issues' 
-              : `${unfixedCount} improvements found`}
-          </p>
+            <span className={projectHealthy ? 'text-success' : 'text-warning'}>
+              {projectHealthy 
+              ? '[OK] Project healthy · No critical issues' 
+              : 'Project needs attention'}
+            </span>
         </div>
       </div>
 

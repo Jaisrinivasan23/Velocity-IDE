@@ -71,8 +71,8 @@ export const TerminalView: React.FC = () => {
                 key={idx} 
                 className={`v-term-line ${
                   line.startsWith('$') ? 'v-term-cmd' : 
-                  line.includes('ERROR') ? 'v-term-err' : 
-                  line.includes('✓') ? 'v-term-success' : ''
+                  line.includes('[SUCCESS]') || line.includes('[OK]') ? 'v-term-success' : 
+                  line.includes('[ERROR]') || line.includes('Error') ? 'v-term-err' : ''
                 }`}
               >
                 {line}

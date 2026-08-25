@@ -92,9 +92,9 @@ export function BalanceCard() {
 
 export function BottomNav({ activeTab, onSelect }) {
   const tabs = [
-    { id: 'home', label: 'Home', icon: '🏠' },
-    { id: 'stats', label: 'Stats', icon: '📊' },
-    { id: 'profile', label: 'Profile', icon: '👤' },
+    { id: 'home', label: 'Home', icon: '[H]' },
+    { id: 'stats', label: 'Stats', icon: '[S]' },
+    { id: 'profile', label: 'Profile', icon: '[P]' },
   ];
 
   return (
@@ -127,10 +127,10 @@ export default function App() {
     <div className="pocket-app">
       <header className="pocket-header">
         <div className="app-branding">
-          <span className="app-icon">⚡</span>
+          <span className="app-icon">PL</span>
           <h1 className="app-name">PocketLedger</h1>
         </div>
-        <span className="offline-badge">● Local</span>
+        <span className="offline-badge">Local</span>
       </header>
 
       <main className="pocket-content">

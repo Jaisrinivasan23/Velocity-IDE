@@ -1,0 +1,120 @@
+.deploy-screen-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px;
+}
+
+.deploy-screen-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.deploy-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.deploy-screen-title {
+  font-size: var(--text-display);
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.deploy-screen-sub {
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+}
+
+.preflight-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.preflight-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-caption);
+  font-weight: 700;
+  color: var(--status-success);
+}
+
+.checklist-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checklist-item-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-small);
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-icon.ok {
+  background: rgba(53, 208, 127, 0.15);
+  color: var(--status-success);
+}
+
+.check-icon.warn {
+  background: rgba(245, 185, 76, 0.15);
+  color: var(--status-warning);
+}
+
+.checklist-label {
+  color: var(--text-primary);
+}
+
+.target-selector-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.target-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.target-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.target-card.active-target {
+  border-color: var(--accent-primary);
+  background: var(--accent-soft);
+}
+
+.target-card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.target-name {
+  font-size: var(--text-small);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.target-desc {
+  font-size: 11px;
+  color: var(--text-muted);
+}

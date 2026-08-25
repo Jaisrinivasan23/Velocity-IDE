@@ -1,0 +1,136 @@
+.ai-debugger-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.debugger-error-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255, 92, 104, 0.1);
+  border: 1px solid rgba(255, 92, 104, 0.3);
+  border-radius: var(--radius-card);
+  padding: 12px 14px;
+}
+
+.error-box-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.error-box-title {
+  font-size: var(--text-caption);
+  font-weight: 700;
+  color: var(--status-error);
+}
+
+.error-box-detail {
+  font-size: var(--text-small);
+  color: var(--text-primary);
+}
+
+.debugger-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  padding: 12px 14px;
+}
+
+.debugger-step-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-small);
+}
+
+.debugger-step-item.done .step-label { color: var(--text-primary); }
+.debugger-step-item.running .step-label { color: var(--accent-primary); font-weight: 600; }
+.debugger-step-item.pending .step-label { color: var(--text-muted); }
+
+.step-icon-wrap {
+  width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border-primary);
+}
+
+.debugger-solution-box {
+  background: var(--bg-higher);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-card);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.solution-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-small);
+  font-weight: 700;
+  color: var(--status-success);
+}
+
+.solution-text {
+  font-size: var(--text-body);
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.diff-preview {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  font-size: 12px;
+  overflow-x: auto;
+}
+
+.diff-header {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.diff-line {
+  padding: 2px 4px;
+  white-space: pre;
+}
+
+.diff-add {
+  background: rgba(53, 208, 127, 0.15);
+  color: var(--status-success);
+}
+
+.diff-remove {
+  background: rgba(255, 92, 104, 0.15);
+  color: var(--status-error);
+}
+
+.debugger-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.secondary-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}

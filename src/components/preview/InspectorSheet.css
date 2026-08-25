@@ -1,0 +1,148 @@
+.inspector-sheet-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.selected-element-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-card);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.element-meta-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent-primary);
+  letter-spacing: 0.05em;
+}
+
+.element-name {
+  font-size: var(--text-section);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.element-file-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.line-badge {
+  background: var(--bg-higher);
+  border: 1px solid var(--border-subtle);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.inspector-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.secondary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.prompt-heading {
+  font-size: var(--text-section);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.suggestion-chips-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.change-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  padding: 12px 14px;
+  text-align: left;
+  color: var(--text-primary);
+  font-size: var(--text-body);
+  transition: all 0.15s ease;
+}
+
+.change-chip:hover {
+  border-color: var(--accent-primary);
+  background: var(--bg-higher);
+}
+
+.change-chip.featured {
+  background: rgba(124, 92, 255, 0.12);
+  border-color: rgba(124, 92, 255, 0.4);
+}
+
+.chip-icon {
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.chip-title {
+  display: block;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.chip-sub {
+  display: block;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.inspector-exec-view {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.exec-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: var(--text-section);
+  color: var(--text-primary);
+}
+
+.exec-steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  padding: 12px 14px;
+}
+
+.exec-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-small);
+}
+
+.exec-step.done { color: var(--text-primary); }
+.exec-step.running { color: var(--accent-primary); font-weight: 600; }
+.exec-step.pending { color: var(--text-muted); }

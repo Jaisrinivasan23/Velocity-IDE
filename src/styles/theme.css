@@ -1,0 +1,54 @@
+:root {
+  /* Colors */
+  --bg-primary: #08090B;
+  --bg-secondary: #0D0F12;
+  --bg-elevated: #13161B;
+  --bg-higher: #181C22;
+  
+  --border-primary: #252A32;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-accent: rgba(124, 92, 255, 0.4);
+  
+  --text-primary: #F5F7FA;
+  --text-secondary: #9AA2AF;
+  --text-muted: #656D79;
+  
+  --accent-primary: #7C5CFF;
+  --accent-hover: #9175FF;
+  --accent-glow: rgba(124, 92, 255, 0.18);
+  --accent-soft: rgba(124, 92, 255, 0.12);
+  
+  --status-success: #35D07F;
+  --status-warning: #F5B94C;
+  --status-error: #FF5C68;
+  --status-info: #5BA7FF;
+  
+  /* Fonts */
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Typography Scale */
+  --text-display: 28px;
+  --text-heading: 22px;
+  --text-section: 16px;
+  --text-body: 14px;
+  --text-small: 12px;
+  --text-caption: 11px;
+  
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-btn: 10px;
+  --radius-card: 14px;
+  --radius-panel: 18px;
+  --radius-sheet: 24px;
+  
+  /* Elevation Shadows */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.35);
+  --shadow-accent: 0 0 20px rgba(124, 92, 255, 0.25);
+  
+  /* Layout Dimensions */
+  --topbar-height: 56px;
+  --bottomnav-height: 72px;
+  --max-content-width: 440px;
+}

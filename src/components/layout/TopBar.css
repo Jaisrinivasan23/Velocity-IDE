@@ -1,0 +1,128 @@
+.v-topbar {
+  height: var(--topbar-height);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 100;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.v-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.v-topbar-back {
+  color: var(--text-secondary);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+}
+.v-topbar-back:hover {
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+}
+
+.v-topbar-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.v-topbar-sparkle {
+  color: var(--accent-primary);
+}
+
+.v-topbar-title-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.v-topbar-title {
+  font-weight: 700;
+  font-size: var(--text-section);
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.v-topbar-subtitle {
+  font-size: 11px;
+  color: var(--status-success);
+  font-weight: 500;
+}
+
+.v-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.v-topbar-action-icon {
+  color: var(--text-secondary);
+  padding: 6px;
+  border-radius: var(--radius-sm);
+}
+.v-topbar-action-icon:hover {
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+}
+
+.v-topbar-menu-wrapper {
+  position: relative;
+}
+
+.v-topbar-menu-btn {
+  color: var(--text-secondary);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.v-topbar-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  width: 180px;
+  background: var(--bg-higher);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-lg);
+  padding: 6px;
+  z-index: 200;
+}
+
+.v-dropdown-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-small);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.v-dropdown-item:hover {
+  background: var(--bg-elevated);
+}
+
+.text-error {
+  color: var(--status-error) !important;
+}
+
+.text-success {
+  color: var(--status-success) !important;
+}
+
+.text-warning {
+  color: var(--status-warning) !important;
+}

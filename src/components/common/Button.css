@@ -1,0 +1,90 @@
+.v-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: var(--radius-btn);
+  font-weight: 600;
+  font-size: var(--text-body);
+  padding: 10px 16px;
+  min-height: 44px;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.v-btn-full {
+  width: 100%;
+}
+
+.v-btn-sm {
+  min-height: 36px;
+  padding: 6px 12px;
+  font-size: var(--text-small);
+  border-radius: var(--radius-sm);
+}
+
+.v-btn-lg {
+  min-height: 50px;
+  padding: 14px 24px;
+  font-size: var(--text-section);
+  border-radius: 12px;
+}
+
+/* Primary Accent */
+.v-btn-primary {
+  background: var(--accent-primary);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(124, 92, 255, 0.3);
+}
+.v-btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 6px 20px rgba(124, 92, 255, 0.45);
+}
+
+/* Secondary Elevated */
+.v-btn-secondary {
+  background: var(--bg-higher);
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
+}
+.v-btn-secondary:hover {
+  background: #20242D;
+  border-color: #323845;
+}
+
+/* Ghost */
+.v-btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+.v-btn-ghost:hover {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+/* Danger */
+.v-btn-danger {
+  background: rgba(255, 92, 104, 0.15);
+  color: var(--status-error);
+  border: 1px solid rgba(255, 92, 104, 0.3);
+}
+.v-btn-danger:hover {
+  background: rgba(255, 92, 104, 0.25);
+}
+
+/* Success */
+.v-btn-success {
+  background: rgba(53, 208, 127, 0.15);
+  color: var(--status-success);
+  border: 1px solid rgba(53, 208, 127, 0.3);
+}
+
+/* Outline */
+.v-btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
+}
+.v-btn-outline:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}

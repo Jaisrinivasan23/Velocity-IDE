@@ -1,0 +1,97 @@
+.ai-sheet-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ai-sheet-file-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-higher);
+  border: 1px solid var(--border-primary);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-small);
+  color: var(--accent-primary);
+  width: fit-content;
+}
+
+.ai-sheet-response {
+  background: rgba(124, 92, 255, 0.08);
+  border: 1px solid rgba(124, 92, 255, 0.3);
+  border-radius: var(--radius-card);
+  padding: 12px 14px;
+}
+
+.response-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-caption);
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: 6px;
+}
+
+.ai-sheet-response p {
+  font-size: var(--text-small);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.ai-sheet-suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.suggestions-label {
+  font-size: var(--text-caption);
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+.chips-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ai-suggestion-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-higher);
+  border: 1px solid var(--border-primary);
+  border-radius: 99px;
+  padding: 6px 12px;
+  font-size: var(--text-small);
+  color: var(--text-primary);
+  transition: all 0.15s ease;
+}
+
+.ai-suggestion-chip:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.chip-sparkle {
+  color: var(--accent-primary);
+}
+
+.ai-sheet-input-row {
+  display: flex;
+  gap: 10px;
+  background: var(--bg-higher);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  padding: 6px 6px 6px 12px;
+  align-items: center;
+}
+
+.ai-sheet-input {
+  flex: 1;
+  font-size: var(--text-body);
+}

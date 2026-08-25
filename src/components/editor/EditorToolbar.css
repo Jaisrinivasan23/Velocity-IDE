@@ -1,0 +1,37 @@
+.v-editor-toolbar {
+  height: 48px;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 8px;
+  flex-shrink: 0;
+}
+
+.v-toolbar-action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-btn);
+  color: var(--text-secondary);
+  font-size: var(--text-small);
+  font-weight: 500;
+  font-family: var(--font-ui);
+}
+
+.v-toolbar-action:hover {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+.v-toolbar-ai {
+  background: var(--accent-soft);
+  color: var(--accent-primary);
+  border: 1px solid rgba(124, 92, 255, 0.3);
+}
+
+.v-toolbar-ai:hover {
+  background: rgba(124, 92, 255, 0.2);
+}

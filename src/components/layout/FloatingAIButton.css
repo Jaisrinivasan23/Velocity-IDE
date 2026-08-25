@@ -1,0 +1,57 @@
+.v-fab-wrapper {
+  pointer-events: auto;
+  margin-bottom: -22px;
+  z-index: 950;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.v-fab-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-primary) 0%, #633BFF 100%);
+  color: #FFFFFF;
+  border: 2px solid var(--bg-primary);
+  box-shadow: var(--shadow-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.v-fab-btn:hover {
+  transform: scale(1.08);
+}
+
+.v-fab-btn:active {
+  transform: scale(0.95);
+}
+
+.v-fab-icon {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.v-fab-tooltip {
+  position: absolute;
+  bottom: 60px;
+  background: var(--bg-higher);
+  border: 1px solid var(--border-primary);
+  color: var(--text-secondary);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 99px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.v-fab-wrapper:hover .v-fab-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}

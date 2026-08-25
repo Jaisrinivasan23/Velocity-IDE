@@ -1,0 +1,97 @@
+.v-doctor-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.v-doctor-hero {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-panel);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--bg-higher);
+  border: 1px solid var(--border-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-title {
+  font-size: var(--text-heading);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.hero-sub {
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.v-doctor-issues-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.issue-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.issue-card.fixed {
+  opacity: 0.7;
+  border-color: rgba(53, 208, 127, 0.3);
+  background: rgba(53, 208, 127, 0.04);
+}
+
+.issue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.issue-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.issue-title {
+  font-size: var(--text-section);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.fixed-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.issue-desc {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.issue-impact {
+  font-size: 11px;
+  color: var(--text-muted);
+}

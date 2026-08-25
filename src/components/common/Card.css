@@ -1,0 +1,36 @@
+.v-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  padding: 16px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.v-card-elevated {
+  background: var(--bg-higher);
+  border-color: #2A303C;
+}
+
+.v-card-glow {
+  background: var(--bg-elevated);
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-accent);
+}
+
+.v-card-glass {
+  background: rgba(19, 22, 27, 0.6);
+  backdrop-filter: blur(12px);
+  border-color: var(--border-subtle);
+}
+
+.v-card-interactive {
+  cursor: pointer;
+}
+.v-card-interactive:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-1px);
+}
+.v-card-interactive:active {
+  transform: scale(0.99);
+}

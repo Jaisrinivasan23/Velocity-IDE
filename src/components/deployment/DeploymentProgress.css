@@ -1,0 +1,114 @@
+.v-deploy-progress-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.progress-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-title {
+  font-size: var(--text-section);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.progress-sub {
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+}
+
+.deploy-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--bg-higher);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 14px;
+}
+
+.deploy-step-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-small);
+}
+
+.deploy-step-row.done { color: var(--text-primary); }
+.deploy-step-row.running { color: var(--accent-primary); font-weight: 600; }
+.deploy-step-row.pending { color: var(--text-muted); }
+
+.v-deploy-success-card {
+  background: linear-gradient(135deg, #121915 0%, #0A120E 100%);
+  border: 1px solid rgba(53, 208, 127, 0.4);
+  border-radius: var(--radius-panel);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  box-shadow: 0 10px 40px rgba(53, 208, 127, 0.15);
+}
+
+.success-icon-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(53, 208, 127, 0.15);
+  border: 2px solid var(--status-success);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 24px rgba(53, 208, 127, 0.3);
+}
+
+.success-heading {
+  font-size: var(--text-heading);
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+}
+
+.success-sub {
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+  margin-top: -10px;
+}
+
+.deployed-url-box {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  padding: 12px 18px;
+  border-radius: var(--radius-card);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  justify-content: center;
+}
+
+.url-protocol { color: var(--text-muted); }
+.url-domain { color: var(--status-success); font-weight: 700; }
+
+.success-action-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.success-secondary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}

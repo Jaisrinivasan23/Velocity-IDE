@@ -1,0 +1,59 @@
+.v-plan-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.v-plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 8px;
+}
+
+.v-plan-title {
+  font-size: var(--text-caption);
+  font-weight: 700;
+  color: var(--accent-primary);
+  letter-spacing: 0.05em;
+}
+
+.v-plan-progress {
+  font-size: var(--text-caption);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.v-plan-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.v-step-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-small);
+  transition: all 0.15s ease;
+}
+
+.v-step-complete .v-step-label {
+  color: var(--text-primary);
+}
+
+.v-step-running .v-step-label {
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.v-step-pending .v-step-label {
+  color: var(--text-muted);
+}
+
+.text-accent { color: var(--accent-primary); }
+.text-muted { color: var(--text-muted); }

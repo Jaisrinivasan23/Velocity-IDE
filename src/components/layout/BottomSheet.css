@@ -1,0 +1,73 @@
+.v-sheet-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.v-sheet-container {
+  width: 100%;
+  max-width: var(--max-content-width);
+  max-height: 85vh;
+  background: var(--bg-higher);
+  border-top-left-radius: var(--radius-sheet);
+  border-top-right-radius: var(--radius-sheet);
+  border-top: 1px solid var(--border-primary);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.v-sheet-handle {
+  width: 36px;
+  height: 4px;
+  background: var(--border-primary);
+  border-radius: 2px;
+  margin: 10px auto 4px auto;
+  flex-shrink: 0;
+}
+
+.v-sheet-header {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.v-sheet-title {
+  font-size: var(--text-section);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.v-sheet-subtitle {
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+}
+
+.v-sheet-close {
+  color: var(--text-muted);
+  padding: 6px;
+  border-radius: var(--radius-sm);
+}
+.v-sheet-close:hover {
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+}
+
+.v-sheet-content {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

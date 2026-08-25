@@ -1,0 +1,240 @@
+.pocket-preview-device {
+  background: #0E1015;
+  color: #F5F7FA;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #1F242D;
+  position: relative;
+}
+
+.pocket-header {
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1B1F28;
+  background: #11141B;
+}
+
+.app-branding {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-icon {
+  font-size: 16px;
+  background: #7C5CFF22;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.app-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: #FFFFFF;
+}
+
+.offline-badge {
+  font-size: 11px;
+  color: #35D07F;
+  background: #35D07F15;
+  padding: 2px 8px;
+  border-radius: 99px;
+  border: 1px solid #35D07F30;
+}
+
+.pocket-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.balance-card {
+  background: linear-gradient(135deg, #181B26 0%, #10121A 100%);
+  border: 1px solid #282E3B;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.balance-label {
+  font-size: 12px;
+  color: #8E96A3;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.balance-amount {
+  font-size: 26px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 6px 0 16px 0;
+}
+
+.balance-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  border-top: 1px solid #232936;
+  padding-top: 12px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-label {
+  font-size: 11px;
+  color: #8E96A3;
+}
+
+.summary-value {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.summary-item.income .summary-value { color: #35D07F; }
+.summary-item.expense .summary-value { color: #FF5C68; }
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #F5F7FA;
+}
+
+.section-more {
+  font-size: 12px;
+  color: #7C5CFF;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transaction-card {
+  background: #141720;
+  border: 1px solid #222733;
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.inspectable {
+  cursor: pointer;
+}
+
+.inspectable:hover {
+  border-color: #7C5CFF;
+  box-shadow: 0 0 12px rgba(124, 92, 255, 0.25);
+}
+
+.inspected-highlight {
+  border: 2px solid #7C5CFF !important;
+  box-shadow: 0 0 20px rgba(124, 92, 255, 0.4) !important;
+  background: rgba(124, 92, 255, 0.1) !important;
+}
+
+.inspect-tag {
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  background: #7C5CFF;
+  color: #FFFFFF;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.tx-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tx-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #1D222E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.tx-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tx-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #F5F7FA;
+}
+
+.tx-category {
+  font-size: 11px;
+  color: #8E96A3;
+}
+
+.tx-amount {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tx-amount.expense { color: #F5F7FA; }
+.tx-amount.income { color: #35D07F; }
+
+.pocket-bottom-nav {
+  height: 56px;
+  background: #11141B;
+  border-top: 1px solid #1B1F28;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.pocket-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: #656D79;
+}
+
+.pocket-nav-item.active {
+  color: #7C5CFF;
+}
+
+.pocket-nav-icon {
+  font-size: 16px;
+}
+
+.pocket-nav-label {
+  font-size: 10px;
+  font-weight: 600;
+}

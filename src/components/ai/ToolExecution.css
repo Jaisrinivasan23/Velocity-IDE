@@ -1,0 +1,53 @@
+.v-tools-container {
+  margin-bottom: 16px;
+}
+
+.v-tools-heading {
+  font-size: var(--text-caption);
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.v-tools-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.v-tool-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-higher);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+}
+
+.v-tool-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.v-tool-type-icon {
+  color: var(--text-muted);
+}
+
+.v-tool-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.v-tool-name {
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.v-tool-detail {
+  font-size: 11px;
+  color: var(--text-muted);
+}

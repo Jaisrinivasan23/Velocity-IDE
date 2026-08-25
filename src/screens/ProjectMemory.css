@@ -1,0 +1,56 @@
+.memory-screen-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px;
+}
+
+.memory-screen-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.memory-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.memory-screen-title {
+  font-size: var(--text-display);
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.memory-screen-sub {
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+}
+
+.memory-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.memory-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.memory-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-section);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.memory-card-body {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}

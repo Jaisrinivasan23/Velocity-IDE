@@ -19,17 +19,23 @@ export const AIAgent: React.FC<AIAgentProps> = ({ embedded = false }) => {
     aiBuildPlan, 
     aiToolActivities, 
     runAIBuildWorkflow, 
-    aiBusy 
+    aiBusy,
+    sendChatMessage,
+    startNewChat
   } = useProject();
 
-  const [inputPrompt, setInputPrompt] = useState(
-    'Build a modern expense tracker with a dashboard, transaction history, categories and local storage.'
-  );
+  const [inputPrompt, setInputPrompt] = useState('');
 
   const handleSubmit = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     if (!inputPrompt.trim() || aiBusy) return;
-    runAIBuildWorkflow(inputPrompt.trim());
+    
+    if (inputPrompt.toLowerCase().includes('build a modern expense tracker')) {
+      runAIBuildWorkflow(inputPrompt.trim());
+    } else {
+      sendChatMessage(inputPrompt.trim());
+    }
+    setInputPrompt('');
   };
 
   const suggestions = [
@@ -106,7 +112,7 @@ export const AIAgent: React.FC<AIAgentProps> = ({ embedded = false }) => {
 
       {/* Bottom Input Area */}
       <form className="agent-input-container" onSubmit={handleSubmit}>
-        <button type="button" className="input-icon-btn" title="Add File">
+        <button type="button" className="input-icon-btn" title="New Chat" onClick={startNewChat}>
           <Plus size={18} />
         </button>
         <button type="button" className="input-icon-btn" title="Voice Input">

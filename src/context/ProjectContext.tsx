@@ -30,6 +30,8 @@ interface ProjectContextType extends ProjectState {
   removeToast: (id: string) => void;
   activeDeployTarget: string;
   setActiveDeployTarget: (target: string) => void;
+  sendChatMessage: (text: string) => Promise<void>;
+  startNewChat: () => void;
 }
 
 const ProjectContext = createContext<ProjectContextType | undefined>(undefined);
@@ -145,6 +147,51 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({ child
       previewRunning: true
     }));
     addToast('App ready! Preview updated.', 'success');
+  };
+
+  const sendChatMessage = async (text: string) => {
+    const userMessage: AIMessage = {
+      id: Date.now().toString(),
+      sender: 'user',
+      text,
+      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+    };
+
+    setState(prev => ({
+      ...prev,
+      aiBusy: true,
+      aiMessages: [...prev.aiMessages, userMessage]
+    }));
+
+    await new Promise(r => setTimeout(r, 800));
+
+    const aiResponse: AIMessage = {
+      id: (Date.now() + 1).toString(),
+      sender: 'ai',
+      text: `I received your request: "${text}". I am simulating the action in this prototype.`,
+      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+    };
+
+    setState(prev => ({
+      ...prev,
+      aiBusy: false,
+      aiMessages: [...prev.aiMessages, aiResponse]
+    }));
+  };
+
+  const startNewChat = () => {
+    setState(prev => ({
+      ...prev,
+      aiMessages: [{
+        id: Date.now().toString(),
+        sender: 'ai',
+        text: "Hi! I'm Velocity AI. How can I help you build today?",
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      }],
+      aiBuildPlan: [],
+      aiToolActivities: []
+    }));
+    addToast('Started a new chat', 'info');
   };
 
   // Hero Flow 2: Glassmorphic UI -> Source modification
@@ -344,7 +391,9 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({ child
         toasts,
         addToast,
         removeToast,
-        setActiveDeployTarget
+        setActiveDeployTarget,
+        sendChatMessage,
+        startNewChat
       }}
     >
       {children}

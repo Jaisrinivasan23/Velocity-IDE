@@ -18,10 +18,10 @@ export const App: React.FC = () => {
   return (
     <ProjectProvider>
       <BrowserRouter>
-        <div className="v-mobile-shell">
+        <div className="app-container">
           <TopBar />
           
-          <main className="v-screen-viewport">
+          <main className="page-container">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/workspace" element={<Workspace />} />
